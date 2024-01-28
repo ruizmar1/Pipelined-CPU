@@ -7,6 +7,9 @@ Through our Compuer Organiation class we spentall semester building up to this f
 
 # The Stages
 Our design consisited of 5 stages. They are in order: Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory (MEM), and Write Back (WB). Below shows a picture of our model.
+![image](https://github.com/ruizmar1/Pipelined-CPU/assets/114714808/239a4a55-3d6b-4075-8683-2acf1eefe24d)
+Image from: "Computer Organization and Design MIPS Edition: The Hardware Software Interface" by David A. Patterson and Johnn L. Hennessy
+
 
 # Hazard-Detection and Forwarding Unit
 We added some logic in the later stages of our pipeline to detect for pipeline hazards. Essentially we are looking to see if an instruction calls upon a register that has not yet made it out of the pipeline into memory. The problem that arises with this is that when we call data from memory we might not be getting the most recent version. We added logic to check for this. In the case that there is a hazard, we designed a forwarding unit that pushes the newer, more current register value to where it needs to be. Additionally, we added logic to our forwarding unit to determine which version of the register should be pushed to the forwarding unit. 
